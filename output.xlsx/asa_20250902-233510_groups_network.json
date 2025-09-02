@@ -1,0 +1,6 @@
+{
+  "NET_GRP1": [
+    "network-object object OBJ_HOST1",
+    "network-object 10.3.0.0 255.255.255.0"
+  ]
+}

@@ -1,0 +1,3 @@
+object,kind,value
+OBJ_HOST1,host,10.1.1.1
+OBJ_SUBNET1,subnet,10.2.0.0 255.255.255.0

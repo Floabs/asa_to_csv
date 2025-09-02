@@ -1,0 +1,6 @@
+{
+  "SVC_GRP1": [
+    "service-object object SVC_HTTP",
+    "service-object udp range 1000 2000"
+  ]
+}

@@ -1,0 +1,4 @@
+acl,action,proto,rest,raw
+OUTSIDE_IN,permit,tcp,object OBJ_HOST1 any object-group SVC_GRP1,access-list OUTSIDE_IN extended permit tcp object OBJ_HOST1 any object-group SVC_GRP1
+OUTSIDE_IN,deny,ip,any any,access-list OUTSIDE_IN extended deny ip any any
+INSIDE_OUT,permit,udp,any 8.8.8.8 255.255.255.255 eq 53,access-list INSIDE_OUT extended permit udp any 8.8.8.8 255.255.255.255 eq 53

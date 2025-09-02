@@ -1,0 +1,16 @@
+line
+object network OBJ_HOST1
+host 10.1.1.1
+object network OBJ_SUBNET1
+subnet 10.2.0.0 255.255.255.0
+object-group network NET_GRP1
+network-object object OBJ_HOST1
+network-object 10.3.0.0 255.255.255.0
+object service SVC_HTTP
+service tcp eq 80
+object-group service SVC_GRP1 tcp
+service-object object SVC_HTTP
+service-object udp range 1000 2000
+access-list OUTSIDE_IN extended permit tcp object OBJ_HOST1 any object-group SVC_GRP1
+access-list OUTSIDE_IN extended deny ip any any
+access-list INSIDE_OUT extended permit udp any 8.8.8.8 255.255.255.255 eq 53
